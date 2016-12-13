@@ -1,0 +1,8 @@
+ul.menu {
+    padding: 0;
+}
+
+ul.menu li {
+    display: inline;
+    margin-right: 6px;
+}
