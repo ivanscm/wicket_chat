@@ -1,9 +1,19 @@
 <!DOCTYPE html>
 <html xmlns:wicket="http://wicket.apache.org">
 <wicket:panel>
-    <ul class="nav nav-pills">
-        <li role="presentation"><a wicket:id="homeLink">Home</a></li>
-        <li role="presentation"><a wicket:id="chatLink">Chat</a></li>
-    </ul>
+    <div class="row">
+        <div class="col-md-8">
+            <ul class="nav nav-pills">
+                <li role="presentation"><a wicket:id="homeLink">Home</a></li>
+                <li role="presentation"><a wicket:id="chatLink">Chat</a></li>
+                <li role="presentation"><a wicket:id="logInLink">LogIn</a></li>
+                <li role="presentation"><a wicket:id="logOutLink">LogOut</a></li>
+            </ul>
+        </div>
+        <div class="col-md-4">
+            <strong class="pull-right" wicket:id="username">[Username]</strong>
+        </div>
+    </div>
+
 </wicket:panel>
 </html>

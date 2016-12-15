@@ -27,7 +27,6 @@ public class SignInPage extends BasePage {
                     return;
 
                 boolean authResult = AuthenticatedWebSession.get().signIn(username, password);
-                //if authentication succeeds redirect user to the requested page
                 if(authResult)
                     continueToOriginalDestination();
             }
@@ -39,5 +38,6 @@ public class SignInPage extends BasePage {
         form.add(new PasswordTextField("password"));
 
         add(form);
+        this.title.setDefaultModelObject("Login Page");
     }
 }

@@ -2,6 +2,7 @@ package ru.ivanscm;
 
 import com.sun.org.apache.bcel.internal.generic.Select;
 import org.apache.wicket.Component;
+import org.apache.wicket.authroles.authentication.AuthenticatedWebSession;
 import org.apache.wicket.markup.head.CssHeaderItem;
 import org.apache.wicket.markup.head.IHeaderResponse;
 import org.apache.wicket.markup.html.WebComponent;
@@ -26,11 +27,15 @@ public class BasePage extends WebPage {
 
 
     public BasePage() {
+
+
+
         menuPanel = new MenuPanel("menuPanel");
         title = new Label("title", "Chat application");
         add(menuPanel);
         add(title);
     }
+
 
     @Override
     public void renderHead(IHeaderResponse response) {
