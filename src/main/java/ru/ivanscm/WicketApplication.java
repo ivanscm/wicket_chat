@@ -7,6 +7,7 @@ import org.apache.wicket.protocol.http.WebApplication;
 
 import org.apache.wicket.authroles.authentication.AuthenticatedWebApplication;
 import ru.ivanscm.authentication.ChatAuthenticationSession;
+import ru.ydn.wicket.wicketorientdb.OrientDbWebApplication;
 
 
 /**
@@ -15,7 +16,7 @@ import ru.ivanscm.authentication.ChatAuthenticationSession;
  *
  * @see ru.ivanscm.Start#main(String[])
  */
-public class WicketApplication extends AuthenticatedWebApplication {
+public class WicketApplication extends OrientDbWebApplication {
     /**
      * @see org.apache.wicket.Application#getHomePage()
      */
@@ -37,10 +38,10 @@ public class WicketApplication extends AuthenticatedWebApplication {
         // add your configuration here
     }
 
-    @Override
+   /* @Override
     protected Class<? extends AbstractAuthenticatedWebSession> getWebSessionClass() {
         return ChatAuthenticationSession.class;
-    }
+    }*/
 
     @Override
     protected Class<? extends WebPage> getSignInPageClass() {
